@@ -1,0 +1,145 @@
+/*html {
+	position: relative;
+	min-height: 100%;  
+}
+*/
+.container-fluid{
+	margin-top: -145px;
+	margin-bottom: 10px;
+
+}
+
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: 'Cabin Condensed', sans-serif;
+	max-width: 100%;
+    overflow-x: hidden;
+}
+
+.scoreboard-header{
+	/*font-size: 28px;*/
+	/*margin: 10px;*/
+	font-family: 'Lato', sans-serif;
+}
+
+h1{
+	text-align: center;
+	margin: 0px;
+	font-size: 2em;
+}
+
+.scoreboard-body {
+	text-align: center;
+}
+
+.scoreboard-body>.row{
+	/*margin-top: 15px;*/
+}
+
+/* Button colors*/
+.button-grey{
+	width: 80px;
+	height: 80px;
+	/* disable padding to center align the digits on the circle*/
+	/*padding: 10px 16px;*/ 
+	font-size: 45px;
+	line-height: 0;
+	border-radius: 50px;
+	color: #000;
+	background-color: #808080;
+	margin-bottom: 8px;
+}
+.button-green{
+	width: 80px;
+	height: 80px;
+	/* padding: 10px 16px; */
+	font-size: 45px;
+	line-height: 0;
+	border-radius: 50px;
+	color: #000;
+	background-color: #00fe24;
+	margin-bottom: 8px;
+}
+.button-red{
+	width: 80px;
+	height: 80px;
+	/* padding: 10px 16px; */
+	font-size: 45px;
+	line-height: 0;
+	border-radius: 50px;
+	color: #000;
+	background-color: #ff0000;
+	margin-bottom: 8px;
+}
+.button-white{
+	width: 80px;
+	height: 80px;
+	/* padding: 10px 16px; */
+	font-size: 45px;
+	line-height: 0;
+	border-radius: 50px;
+	color: #000;
+	background-color: #fff;
+}
+
+/* Button colors*/
+.round{
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+.round > h1{
+	font-size: 46px;
+}
+.round > h2{
+	font-size: 36px;
+}
+
+.footer {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	/*height: 60px;*/
+	background-color: #f5f5f5;
+}
+
+
+
+/* Circle button*/
+/* For current call*/
+.btn-circle.btn-xxl-current {
+	width: 150px;
+	height: 150px;
+	padding: 10px 16px;
+	font-size: 100px;
+	line-height: 1.33;
+	border-radius: 120px;
+	color: #000;
+	background-color: #00fe24;
+}
+/* For previous call*/
+.btn-circle.btn-xxl-prev {
+	width: 150px;
+	height: 150px;
+	padding: 10px 16px;
+	font-size: 100px;
+	line-height: 1.33;
+	border-radius: 120px;
+	color: #000;
+	background-color: #ff0000;
+}
+
+
+li {
+    color: #000;
+    font-size: 18px;
+}
+.modal-text{
+	display: inline;
+
+}
+
+
+
+

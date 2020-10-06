@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- <link rel="icon" href="http://getbootstrap.com/favicon.ico"> -->
+
+  <title>Admin View</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+  <!-- Normalise css -->
+  <link rel="stylesheet" type="text/css" href="css/normalise.css">
+  <!-- For Jquery Web Ticker-->
+  <link rel="stylesheet" href="plugins/jquery_web_ticker/web_ticker.css" />
+  <!-- Fonts -->
+  <link rel="stylesheet" type="text/css" href="css/fonts.css">
+  <!-- icheck CSS -->
+  <link href="plugins/icheck/skins/flat/blue.css" rel="stylesheet">
+  <!-- Custom css -->
+  <link rel="stylesheet" type="text/css" href="css/custom_admin.css">
+ 
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="header"></div>
+    <div class="body">
+      <canvas id="canvas">ttt</canvas>
+      <div class="row">
+        <div class="col-md-6">
+          <div id="buttons">
+
+          </div>
+          <!-- /. buttons -->
+        </div>
+        <!-- /. col -->
+        <div class="col-md-6">
+          <!-- Buttons excluded -->
+          <div class="scoreboard-header">
+            <h1>ADMIN VIEW</h1>
+            <h1><strong>HOUSIE SCOREBOARD</strong></h1>
+          </div>
+          <!-- /. scoreboard-header -->
+          <!-- Buttons excluded -->
+          <div class="scoreboard-body">
+            <div class="row">
+              <div class="col-md-6">
+                <h2>CURRENT CALL</h2>
+                <input id="current_call" type="button" class="btn btn-circle btn-xxl-current" />
+                <div id="current_call_count"></div>
+              </div>
+              <!-- /. col -->
+              <div class="col-md-6">
+                <h2>PREVIOUS CALL</h2>
+                <input id="previous_call" type="button" class="btn btn-circle btn-xxl-prev"/>
+                <div id="previous_call_count"></div>
+              </div>
+              <!-- /. col -->
+            </div>
+            <!-- /. row -->
+            <div class="row">
+              <div class="col-md-6">
+                <!-- Form starts -->
+                <form class="form-rounds">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <!-- <label for="rounds">Rounds</label> -->
+                        <h2>ROUNDS</h2>
+                        <select class="form-control" name="rounds" id="rounds">
+                          <option value="default">Choose...</option>
+                          <option>ROUND 1</option>
+                          <option>ROUND 2</option>
+                          <option>ROUND 3</option>
+                          <option>ROUND 4</option>
+                          <option>ROUND 5</option>
+                          <option>SPECIAL ROUND</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <!-- <label for="prize_money">Prize Money</label> -->
+                      <h2>PRIZE MONEY</h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <div class="form-group" style="margin-top:30px;">
+                        <input type="checkbox" id="checkbox_obj_1">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="obj_1">Objectives</label>
+                        <select class="form-control" name="obj_1" id="obj_1">
+                          <option value="default">Choose...</option>
+                          <option value="4_corners">4 CORNERS</option>
+                          <option value="a_line">A.LINE</option>
+                          <option value="house">HOUSE</option>
+                          <option value="top_line">TOP LINE</option>
+                          <option value="pyramid">PYRAMID</option>
+                          <option value="b_line">B.LINE</option>
+                          <option value="r_pyramid">R.PYRAMID</option>
+                          <option value="six_corners">SIX CORNERS</option>
+                          <option value="quick_nine">QUICK NINE</option>
+                          <option value="1st_any_line">1ST ANY LINE</option>
+                          <option value="2nd_any_line">2ND ANY LINE</option>
+                          <option value="3rd_any_line">3RD ANY LINE</option>
+                          <option value="1st_house">1ST HOUSE</option>
+                          <option value="2nd_house">2ND HOUSE</option>
+                          <option value="centre_line">CENTRE LINE</option>
+                          <option value="bottom_line">BOTTOM LINE</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prize_1">Prize</label>
+                        <input type="text" class="form-control" id="prize_money_1" name="prize_money_1" placeholder="Enter prize money here..."/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-1">
+                      <div class="form-group" style="margin-top:30px;">
+                        <input type="checkbox" id="checkbox_obj_2">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="obj_1">Objectives</label>
+                        <select class="form-control" name="obj_1" id="obj_2">
+                          <option value="default">Choose...</option>
+                          <option value="4_corners">4 CORNERS</option>
+                          <option value="a_line">A.LINE</option>
+                          <option value="house">HOUSE</option>
+                          <option value="top_line">TOP LINE</option>
+                          <option value="pyramid">PYRAMID</option>
+                          <option value="b_line">B.LINE</option>
+                          <option value="r_pyramid">R.PYRAMID</option>
+                          <option value="six_corners">SIX CORNERS</option>
+                          <option value="quick_nine">QUICK NINE</option>
+                          <option value="1st_any_line">1ST ANY LINE</option>
+                          <option value="2nd_any_line">2ND ANY LINE</option>
+                          <option value="3rd_any_line">3RD ANY LINE</option>
+                          <option value="1st_house">1ST HOUSE</option>
+                          <option value="2nd_house">2ND HOUSE</option>
+                          <option value="centre_line">CENTRE LINE</option>
+                          <option value="bottom_line">BOTTOM LINE</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prize_2">Prize</label>
+                        <input type="text" class="form-control" id="prize_money_2" name="prize_money_2" placeholder="Enter prize money here..."/>
+                      </div>
+                    </div>
+                  </div>
+                 <div class="row">
+                    <div class="col-md-1">
+                      <div class="form-group" style="margin-top:30px;">
+                        <input type="checkbox" id="checkbox_obj_3">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="obj_1">Objectives</label>
+                        <select class="form-control" name="obj_1" id="obj_3">
+                          <option value="default">Choose...</option>
+                          <option value="4_corners">4 CORNERS</option>
+                          <option value="a_line">A.LINE</option>
+                          <option value="house">HOUSE</option>
+                          <option value="top_line">TOP LINE</option>
+                          <option value="pyramid">PYRAMID</option>
+                          <option value="b_line">B.LINE</option>
+                          <option value="r_pyramid">R.PYRAMID</option>
+                          <option value="six_corners">SIX CORNERS</option>
+                          <option value="quick_nine">QUICK NINE</option>
+                          <option value="1st_any_line">1ST ANY LINE</option>
+                          <option value="2nd_any_line">2ND ANY LINE</option>
+                          <option value="3rd_any_line">3RD ANY LINE</option>
+                          <option value="1st_house">1ST HOUSE</option>
+                          <option value="2nd_house">2ND HOUSE</option>
+                          <option value="centre_line">CENTRE LINE</option>
+                          <option value="bottom_line">BOTTOM LINE</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prize_3">Prize</label>
+                        <input type="text" class="form-control" id="prize_money_3" name="prize_money_3" placeholder="Enter prize money here..."/>
+                      </div>
+                    </div>
+                  </div>
+                 <div class="row">
+                    <div class="col-md-1">
+                      <div class="form-group" style="margin-top:30px;">
+                        <input type="checkbox" id="checkbox_obj_4">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="obj_1">Objectives</label>
+                        <select class="form-control" name="obj_1" id="obj_4">
+                          <option value="default">Choose...</option>
+                          <option value="4_corners">4 CORNERS</option>
+                          <option value="a_line">A.LINE</option>
+                          <option value="house">HOUSE</option>
+                          <option value="top_line">TOP LINE</option>
+                          <option value="pyramid">PYRAMID</option>
+                          <option value="b_line">B.LINE</option>
+                          <option value="r_pyramid">R.PYRAMID</option>
+                          <option value="six_corners">SIX CORNERS</option>
+                          <option value="quick_nine">QUICK NINE</option>
+                          <option value="1st_any_line">1ST ANY LINE</option>
+                          <option value="2nd_any_line">2ND ANY LINE</option>
+                          <option value="3rd_any_line">3RD ANY LINE</option>
+                          <option value="1st_house">1ST HOUSE</option>
+                          <option value="2nd_house">2ND HOUSE</option>
+                          <option value="centre_line">CENTRE LINE</option>
+                          <option value="bottom_line">BOTTOM LINE</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prize_4">Prize</label>
+                        <input type="text" class="form-control" id="prize_money_4" name="prize_money_4" placeholder="Enter prize money here..."/>
+                      </div>
+                    </div>
+                  </div>
+                   <div class="row">
+                    <div class="col-md-1">
+                      <div class="form-group" style="margin-top:30px;">
+                        <input type="checkbox" id="checkbox_obj_5">
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <div class="form-group">
+                        <label for="obj_1">Objectives</label>
+                        <select class="form-control" name="obj_1" id="obj_5">
+                          <option value="default">Choose...</option>
+                          <option value="4_corners">4 CORNERS</option>
+                          <option value="a_line">A.LINE</option>
+                          <option value="house">HOUSE</option>
+                          <option value="top_line">TOP LINE</option>
+                          <option value="pyramid">PYRAMID</option>
+                          <option value="b_line">B.LINE</option>
+                          <option value="r_pyramid">R.PYRAMID</option>
+                          <option value="six_corners">SIX CORNERS</option>
+                          <option value="quick_nine">QUICK NINE</option>
+                          <option value="1st_any_line">1ST ANY LINE</option>
+                          <option value="2nd_any_line">2ND ANY LINE</option>
+                          <option value="3rd_any_line">3RD ANY LINE</option>
+                          <option value="1st_house">1ST HOUSE</option>
+                          <option value="2nd_house">2ND HOUSE</option>
+                          <option value="centre_line">CENTRE LINE</option>
+                          <option value="bottom_line">BOTTOM LINE</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label for="prize_5">Prize</label>
+                        <input type="text" class="form-control" id="prize_money_5" name="prize_money_5" placeholder="Enter prize money here..."/>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 col-md-offset-3" style="margin-top: 20px;">
+                      <button type="submit" class="btn btn-primary btn-block" id="update_round">SUBMIT</button>
+                    </div>
+                    <!-- /. col -->
+                  </div>
+                </form>
+                <!-- Form ends -->
+              </div>
+              <!-- /. col-md-6 -->
+              <div class="col-md-6">
+                <div class="btn-group-vertical col-md-offset-6" style="margin-top: 60px;">
+                  <!-- <button type="button" class="btn btn-primary" id="winner-fireworks">WINNER</button><br> -->
+                  <!-- <button type="button" class="btn btn-primary">SNOWBALL</button><br> -->
+                  <button type="button" class="btn btn-primary" id="undo_last_call">UNDO LAST CALL</button><br>
+                  <button type="button" class="btn btn-primary" id="reset-board">RESET BOARD</button><br>
+                  <button type="button" class="btn btn-primary" id="reset-all">RESET ALL</button><br>
+                  <button type="button" class="btn btn-primary" id="ticker_text" data-toggle="modal" data-target="#ticker_modal">SET TICKER TEXT</button><br>
+                </div>
+              </div>
+            </div>
+            <!-- /. row -->
+          </div>
+          <!-- /. scoreboard-body -->
+        </div>
+        <!-- /. col -->
+      </div>
+      <!-- /. row -->
+    </div>
+    <!-- /. body -->
+    
+  </div>
+  <!-- /. container-fluid -->
+
+  <!-- Ticker modal -->
+  <div class="modal fade" id="ticker_modal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="color:#000;">SET TICKER TEXT</h4>
+        </div>
+        <div class="modal-body">
+          <textarea id="modal_text" class="form-control"></textarea><br>
+          <button id="add_text_button" class="btn btn-primary pull-right">Add Text</button><br><br>
+          <div id="modal_test">
+            <ul class="modal_list"></ul>
+          </div>
+          <button id="add_to_ticker" class="btn btn-primary pull-right">Apply Changes To Ticker</button><br><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      <!-- Modal content ends here -->
+      
+    </div>
+  </div>
+  <!-- Ticker modal ends here -->
+
+  <div class="footer">
+    <div class="web-ticker-container">
+      <div class="ticker-sibling">
+        <span><img src="images/logo_psionic_5.png" width="280" height="35"></span>
+      </div>
+    </div>
+    <div class="web-ticker" id="ticker_test">
+      <ul id="web_ticker-items" class="text_from_modal">
+        <li>Welcome to HOUSIE</li>
+        <li>In Cadet College Club</li>
+        <li>Powered By Psionic Interactive Limited</li>
+      </ul>
+    </div>
+  </div>
+    <!-- /. footer -->
+
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="/js/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+  <script src="/js/bootstrap.min.js"></script>
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="/js/ie10-viewport-bug-workaround.js"></script>
+  <!-- Jquery Web Ticker Plugin -->
+  <script src="plugins/jquery_web_ticker/jquery.webticker.min.js"></script>
+  <!-- icheck JS -->
+  <script src="plugins/icheck/icheck.js"></script>
+  <!-- Socket -->
+  <script src="/socket.io/socket.io.js"></script>
+  
+  <!-- Page Script -->
+  <script>
+
+    //didn't work inside document ready
+    var buttons = []; // stores button ids
+    // Keeps call count
+    var call_count_current = 0;
+    var call_count_previous = 0;
+    // Stores button values 
+    function storeValue($id){
+      //returns  -1 if not found in the array
+      if(jQuery.inArray($id, buttons, 0) != -1){
+        // alert("Value exists!");
+      }
+      else{
+        buttons.push($id);
+        var current_call_value = '#' + buttons[buttons.length-1];
+        var previous_call_value = '#' + buttons[buttons.length-2];
+        $('#current_call').val($(current_call_value).val());
+        $('#previous_call').val($(previous_call_value).val());
+        changeColor();
+        callCount();
+      }
+      
+    }
+
+    // Used to change button color - green, red, white
+    function changeColor(){
+      var current = buttons[buttons.length-1];
+      var prev = buttons[buttons.length-2];
+      $('#'+current).removeClass();
+      $('#'+current).toggleClass('btn button-green');
+      $('#'+prev).removeClass();
+      $('#'+prev).toggleClass('btn button-red');
+      for (var i = buttons.length-3; i >= buttons.length-3; i--) {
+        $('#'+buttons[i]).removeClass();
+        $('#'+buttons[i]).toggleClass('btn button-white');
+      }
+    }
+
+    // Used to track of call count
+    function callCount(){
+      call_count_current = buttons.indexOf(buttons[buttons.length-1])+1;
+      call_count_previous = call_count_current - 1;
+      if(call_count_previous == -1){
+        call_count_previous = 0;
+      }
+      $('#current_call_count').html('<h2>' + 'CALL NUMBER: ' + call_count_current + '</h2>');
+      $('#previous_call_count').html('<h2>' + 'CALL NUMBER: ' + call_count_previous + '</h2>');
+    }
+
+    // Changes on Undo
+    function changesOnUndo(keep_last_call){
+      // alert("Value- "+val[val.length-3]);
+      var last_current = keep_last_call;
+      var current = buttons[buttons.length-1];
+      var prev = buttons[buttons.length-2];
+      $('#'+last_current).removeClass();
+      $('#'+last_current).toggleClass('btn button-grey');
+      $('#'+current).removeClass();
+      $('#'+current).toggleClass('btn button-green');
+      $('#'+prev).removeClass();
+      $('#'+prev).toggleClass(' btn button-red');
+      for (var i = buttons.length-3; i >= buttons.length-3; i--) {
+        $('#'+buttons[i]).removeClass();
+        $('#'+buttons[i]).toggleClass('btn button-white');
+      }
+      callCount();
+    }
+
+    // Changes on Reset
+    function changesOnReset(){
+      // Changes Color
+      for (var i = buttons.length-1; i >= 0; i--) {
+        $('#'+buttons[i]).removeClass();
+        $('#'+buttons[i]).toggleClass('btn button-grey');
+      } 
+      // Changes Call Number
+      $('#current_call').val('');
+      $('#previous_call').val('');
+      // Changes Call Count
+      $('#current_call_count').html('<h2>' + 'CALL NUMBER: ' + 0 + '</h2>');
+      $('#previous_call_count').html('<h2>' + 'CALL NUMBER: ' + 0 + '</h2>');
+
+
+    }
+
+    $(document).ready(function(){
+
+      var pages = 99;
+      var pageButtons = $('#buttons');
+      var count = 1;
+      var line_count = 1;
+      var index_value = 1;
+      // For ticker text
+      var text_ticker = '';
+      
+      var d = new Date();
+      var n = d.getTime();
+
+      if(n < 1492452000000){
+        // To print 90 circle buttons
+        for (var i = 1; i <= pages; i++) {
+          if (count <= 9) {
+            pageButtons.append('<span style="padding:5px;"><input type="button" class="btn button-grey btn-num" id="button'+index_value+'" value="'+index_value+'" onclick="storeValue(id);" /></span>');
+            index_value = index_value + 10; 
+            count = count + 1;
+          }
+          else{
+            pageButtons.append('<br>');
+            count = 1;
+            line_count = line_count + 1;  
+            index_value = line_count;
+          }  
+
+        };
+
+      }
+      else{
+        alert('YOUR LICENSE HAS EXPIRED!');
+      }
+    
+
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_flat-blue'
+      });
+
+      // For Jquery Web Ticker
+      $("#web_ticker-items").webTicker({
+        duplicate:true 
+      });
+
+      
+
+      //Socket
+      var socket = io();
+      // Click function on Circle button click
+      $('.btn-num').click(function(){
+       socket.emit('update board', $(this).val());
+       return false;
+      });
+
+      // Browser refresh/window close warning message
+      window.onbeforeunload = function() {
+        return "Data will be lost if you leave the page, are you sure?";
+      };
+
+      // Send the round information to the Scoreboard View
+      $('#update_round').click(function(){
+        var round = $("#rounds option:selected").text(),
+        obj_1 = $("#obj_1 option:selected").text(),
+        obj_2 = $("#obj_2 option:selected").text(),
+        obj_3 = $("#obj_3 option:selected").text(),
+        obj_4 = $("#obj_4 option:selected").text(),
+        obj_5 = $("#obj_5 option:selected").text();
+
+        var prize_money_1 = $("#prize_money_1").val(),
+        prize_money_2 = $("#prize_money_2").val(),
+        prize_money_3 = $("#prize_money_3").val(),
+        prize_money_4 = $("#prize_money_4").val(),
+        prize_money_5 = $("#prize_money_5").val();
+        
+        var checkbox_obj_1 = $('input#checkbox_obj_1').is(':checked'),
+        checkbox_obj_2 = $('input#checkbox_obj_2').is(':checked'),
+        checkbox_obj_3 = $('input#checkbox_obj_3').is(':checked'),
+        checkbox_obj_4 = $('input#checkbox_obj_4').is(':checked'),
+        checkbox_obj_5 = $('input#checkbox_obj_5').is(':checked');
+
+        
+        var objectives = [obj_1, obj_2, obj_3, obj_4, obj_5];
+        var prize_money = [prize_money_1, prize_money_2, prize_money_3, prize_money_4, prize_money_5];
+        var checkbox_objectives = [checkbox_obj_1, checkbox_obj_2, checkbox_obj_3, checkbox_obj_4, checkbox_obj_5];
+
+       socket.emit('update round', round, objectives, prize_money, checkbox_objectives);
+       return false;
+      });
+
+
+      // Undo last call
+      $('#undo_last_call').click(function(){
+        if (confirm('Are you sure you want to undo the last call?')) {
+          var keep_last_call = buttons.pop(); 
+          var current_call_value = '#' + buttons[buttons.length-1];
+          var previous_call_value = '#' + buttons[buttons.length-2];
+          $('#current_call').val($(current_call_value).val());
+          $('#previous_call').val($(previous_call_value).val());
+          changesOnUndo(keep_last_call);
+          socket.emit('undo last');
+        } else {
+          // Do nothing!
+        }
+        
+      });
+
+      // Reset board 
+      $('#reset-board').click(function(){
+        if (confirm('Are you sure you want to reset the board?')) {
+         changesOnReset();
+         buttons = [];
+         socket.emit('reset board');
+
+       }
+       
+      });
+
+      //Reset all
+      $('#reset-all').click(function(){
+        if (confirm('Are you sure you want to reset all?')) {
+          changesOnReset();
+          buttons = [];
+          // Clears all prize text fields
+          $("form.form-rounds :input[type=text]").each(function(){
+            $(this).val('');
+          });
+          // Clears all select fields to Choose
+          $("form.form-rounds select").each(function(){
+            $(this).val('default');
+          });
+          // Clears all select fields to Choose
+          $("form.form-rounds :input[type=checkbox]").each(function(){
+            $(this).iCheck('uncheck');
+          });
+
+          socket.emit('reset all');
+        }
+
+      });
+
+
+      // ...................................................................................................................
+      
+      $('#add_text_button').click(function(){
+        var modal_text_and_button = $('#modal_text').val() + ' <button class="btn btn-default">x</button>';
+        var modal_text = $('#modal_text').val();
+        if(modal_text.length > 0){
+          $('<li />', {html: modal_text_and_button}).appendTo('ul.modal_list');
+        }
+      });
+
+      $('ul').on('click','button' , function(el){
+        $(this).parent().remove();
+
+      });
+
+     
+      $('#add_to_ticker').on('click', function(){
+
+        $("#modal_test ul li").each(function() {
+
+          var el = $(this);
+          text_ticker = text_ticker +'<li>' + el.text().replace(/x/g ,"") + '</li>';
+
+        });
+
+        text_tickers = text_ticker || '<li>Powered By Psionic Interactive</li>';
+        $("#web_ticker-items").webTicker('update',
+          text_tickers,
+          'swap',
+          true,
+          false
+        );
+        socket.emit('ticker text', text_tickers);
+        text_ticker = '';
+        
+      });
+
+      // .....................................................................................................................
+
+      // Winner fireworks
+      var toggle = true;
+      $('#winner-fireworks').click(function(){
+        if(toggle){
+          $("canvas").css("display", "inline");
+          socket.emit('winner fireworks', toggle);
+          toggle = false;
+        }
+        else{
+          $("canvas").css("display", "none");
+          socket.emit('winner fireworks', toggle);
+          toggle = true;
+       }
+
+      });
+
+      $('#rounds').change(function(){
+        // $('#checkbox_obj_1').iCheck('check');
+
+        if($(this).val() === 'ROUND 1'){
+          // To clear the fields
+          // Select fields
+          $('#obj_1').val('default');
+          $('#obj_2').val('default');
+          $('#obj_3').val('default');
+          $('#obj_4').val('default');
+          $('#obj_5').val('default');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('uncheck');
+          $('#checkbox_obj_2').iCheck('uncheck');
+          $('#checkbox_obj_3').iCheck('uncheck');
+          $('#checkbox_obj_4').iCheck('uncheck');
+          $('#checkbox_obj_5').iCheck('uncheck');
+          // Prizes
+          $('#prize_money_1').val('');
+          $('#prize_money_2').val('');
+          $('#prize_money_3').val('');
+          $('#prize_money_4').val('');
+          $('#prize_money_5').val('');
+
+          // To fill the fields with given data
+          // Select fields
+          $('#obj_1').val('4_corners');
+          $('#obj_2').val('a_line');
+          $('#obj_3').val('house');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('check');
+          $('#checkbox_obj_2').iCheck('check');
+          // Prizes
+          $('#prize_money_1').val('BDT 1500');
+          $('#prize_money_2').val('BDT 1500');
+          $('#prize_money_3').val('BDT 3000');
+          
+
+        }
+
+        else if($(this).val() === 'ROUND 2'){
+          // To clear the fields
+          // Select fields
+          $('#obj_1').val('default');
+          $('#obj_2').val('default');
+          $('#obj_3').val('default');
+          $('#obj_4').val('default');
+          $('#obj_5').val('default');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('uncheck');
+          $('#checkbox_obj_2').iCheck('uncheck');
+          $('#checkbox_obj_3').iCheck('uncheck');
+          $('#checkbox_obj_4').iCheck('uncheck');
+          $('#checkbox_obj_5').iCheck('uncheck');
+          // Prizes
+          $('#prize_money_1').val('');
+          $('#prize_money_2').val('');
+          $('#prize_money_3').val('');
+          $('#prize_money_4').val('');
+          $('#prize_money_5').val('');
+
+          // To fill the fields with given data
+          // Select fields
+          $('#obj_1').val('top_line');
+          $('#obj_2').val('pyramid');
+          $('#obj_3').val('house');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('check');
+          $('#checkbox_obj_2').iCheck('check');
+           // Prizes
+          $('#prize_money_1').val('BDT 1500');
+          $('#prize_money_2').val('BDT 1500');
+          $('#prize_money_3').val('BDT 4000');
+
+        }
+
+        else if($(this).val() === 'ROUND 3'){
+          // To clear the fields
+          // Select fields
+          $('#obj_1').val('default');
+          $('#obj_2').val('default');
+          $('#obj_3').val('default');
+          $('#obj_4').val('default');
+          $('#obj_5').val('default');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('uncheck');
+          $('#checkbox_obj_2').iCheck('uncheck');
+          $('#checkbox_obj_3').iCheck('uncheck');
+          $('#checkbox_obj_4').iCheck('uncheck');
+          $('#checkbox_obj_5').iCheck('uncheck');
+          // Prizes
+          $('#prize_money_1').val('');
+          $('#prize_money_2').val('');
+          $('#prize_money_3').val('');
+          $('#prize_money_4').val('');
+          $('#prize_money_5').val('');
+
+          // To fill the fields with given data
+          // Select fields
+          $('#obj_1').val('b_line');
+          $('#obj_2').val('r_pyramid');
+          $('#obj_3').val('house');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('check');
+          $('#checkbox_obj_2').iCheck('check');
+           // Prizes
+          $('#prize_money_1').val('BDT 1500');
+          $('#prize_money_2').val('BDT 1500');
+          $('#prize_money_3').val('BDT 5000');
+
+        }
+
+        else if($(this).val() === 'ROUND 4'){
+          // To clear the fields
+          // Select fields
+          $('#obj_1').val('default');
+          $('#obj_2').val('default');
+          $('#obj_3').val('default');
+          $('#obj_4').val('default');
+          $('#obj_5').val('default');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('uncheck');
+          $('#checkbox_obj_2').iCheck('uncheck');
+          $('#checkbox_obj_3').iCheck('uncheck');
+          $('#checkbox_obj_4').iCheck('uncheck');
+          $('#checkbox_obj_5').iCheck('uncheck');
+          // Prizes
+          $('#prize_money_1').val('');
+          $('#prize_money_2').val('');
+          $('#prize_money_3').val('');
+          $('#prize_money_4').val('');
+          $('#prize_money_5').val('');
+
+          // To fill the fields with given data
+          // Select fields
+          $('#obj_1').val('six_corners');
+          $('#obj_2').val('quick_nine');
+          $('#obj_3').val('house');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('check');
+          $('#checkbox_obj_2').iCheck('check');
+           // Prizes
+          $('#prize_money_1').val('BDT 1500');
+          $('#prize_money_2').val('BDT 1500');
+          $('#prize_money_3').val('BDT 6000');
+
+        }
+
+        else if($(this).val() === 'ROUND 5'){
+          // To clear the fields
+          // Select fields
+          $('#obj_1').val('default');
+          $('#obj_2').val('default');
+          $('#obj_3').val('default');
+          $('#obj_4').val('default');
+          $('#obj_5').val('default');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('uncheck');
+          $('#checkbox_obj_2').iCheck('uncheck');
+          $('#checkbox_obj_3').iCheck('uncheck');
+          $('#checkbox_obj_4').iCheck('uncheck');
+          $('#checkbox_obj_5').iCheck('uncheck');
+          // Prizes
+          $('#prize_money_1').val('');
+          $('#prize_money_2').val('');
+          $('#prize_money_3').val('');
+          $('#prize_money_4').val('');
+          $('#prize_money_5').val('');
+
+          // To fill the fields with given data
+          // Select fields
+          $('#obj_1').val('1st_any_line');
+          $('#obj_2').val('2nd_any_line');
+          $('#obj_3').val('3rd_any_line');  
+          $('#obj_4').val('1st_house');
+          $('#obj_5').val('2nd_house');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('check');
+          $('#checkbox_obj_2').iCheck('check');
+          $('#checkbox_obj_3').iCheck('check');
+           // Prizes
+          $('#prize_money_1').val('BDT 1500');
+          $('#prize_money_2').val('BDT 1500');
+          $('#prize_money_3').val('BDT 1500');
+          $('#prize_money_4').val('BDT 7000');
+          $('#prize_money_5').val('BDT 3000');
+
+        }
+
+        else if($(this).val() === 'SPECIAL ROUND'){
+          // To clear the fields
+          // Select fields
+          $('#obj_1').val('default');
+          $('#obj_2').val('default');
+          $('#obj_3').val('default');
+          $('#obj_4').val('default');
+          $('#obj_5').val('default');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('uncheck');
+          $('#checkbox_obj_2').iCheck('uncheck');
+          $('#checkbox_obj_3').iCheck('uncheck');
+          $('#checkbox_obj_4').iCheck('uncheck');
+          $('#checkbox_obj_5').iCheck('uncheck');
+          // Prizes
+          $('#prize_money_1').val('');
+          $('#prize_money_2').val('');
+          $('#prize_money_3').val('');
+          $('#prize_money_4').val('');
+          $('#prize_money_5').val('');
+
+          // To fill the fields with given data
+          // Select fields
+          $('#obj_1').val('top_line');
+          $('#obj_2').val('centre_line');
+          $('#obj_3').val('bottom_line');
+          $('#obj_4').val('1st_house');
+          $('#obj_5').val('2nd_house');
+          // Checkboxes
+          $('#checkbox_obj_1').iCheck('check');
+          $('#checkbox_obj_2').iCheck('check');
+          $('#checkbox_obj_3').iCheck('check');
+           // Prizes
+          $('#prize_money_1').val('BDT 2000');
+          $('#prize_money_2').val('BDT 2000');
+          $('#prize_money_3').val('BDT 2000');
+          $('#prize_money_4').val('BDT 25000');
+          $('#prize_money_5').val('BDT 5000');
+
+        }
+
+        else if ($(this).val() === 'Choose...') {
+        // To clear the fields
+        // Select fields
+        $('#obj_1').val('default');
+        $('#obj_2').val('default');
+        $('#obj_3').val('default');
+        $('#obj_4').val('default');
+        $('#obj_5').val('default');
+        // Checkboxes
+        $('#checkbox_obj_1').iCheck('uncheck');
+        $('#checkbox_obj_2').iCheck('uncheck');
+        $('#checkbox_obj_3').iCheck('uncheck');
+        $('#checkbox_obj_4').iCheck('uncheck');
+        $('#checkbox_obj_5').iCheck('uncheck');
+        // Prizes
+        $('#prize_money_1').val('');
+        $('#prize_money_2').val('');
+        $('#prize_money_3').val('');
+        $('#prize_money_4').val('');
+        $('#prize_money_5').val('');
+
+      }
+
+
+
+      });
+
+
+      
+
+    });
+    /* document.ready finishes here*/
+
+</script>
+
+</body></html>
